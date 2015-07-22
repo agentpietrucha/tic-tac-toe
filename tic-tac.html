@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tic-tac-toe</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab|Raleway:600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./stylesheets/my.css"></link>
+</head>
+<body>
+<div class="tic"><h1 class="h1">TIC-TAC-TOE.BeTA</h1></div>
+<div class="container">
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+</div>
+<div class="winner"><p id="td1"></p></div>
+<div class="reload" id="divrel">reload</div>
+<script>
+	var buttrel = document.getElementById('divrel');
+	buttrel.onclick = function() {
+		reload();
+	}
+	var a = document.querySelectorAll('.box')
+	var player = 1;
+	var p
+	//tu trzeba potem usunac = 'mions'
+	var player1 = 'mions';
+	var player2 = 'benio';
+	function playerName() {
+		player1 = prompt('You are the player1, choose your name');
+		player2 = prompt('You are the player2, choose your name');
+	}
+	// playerName();
+	// [a,b,c].onclc
+	function changeBackground(target, color) {
+		target.style.background = color;
+	}
+	function insertText1(input) {
+		document.getElementById('td1').innerHTML = player1 + ' ' + input;
+	}
+	function insertText2(input) {
+		document.getElementById('td1').innerHTML = player2 + ' ' + input;	
+	}
+	function judge1() {
+		if ( a[0].style.background ==='rgb(24, 171, 152)' && a[1].style.background ==='rgb(24, 171, 152)' && a[2].style.background ==='rgb(24, 171, 152)') {
+			insertText1('won!');
+		} else if (a[3].style.background ==='rgb(24, 171, 152)' && a[4].style.background ==='rgb(24, 171, 152)' && a[5].style.background ==='rgb(24, 171, 152)'){
+			insertText1('won!');
+		} else if (a[6].style.background ==='rgb(24, 171, 152)' && a[7].style.background ==='rgb(24, 171, 152)' && a[8].style.background ==='rgb(24, 171, 152)'){
+			insertText1('won!');
+		} else if (a[0].style.background ==='rgb(24, 171, 152)' && a[3].style.background ==='rgb(24, 171, 152)' && a[6].style.background ==='rgb(24, 171, 152)'){
+			insertText1('won!');
+		} else if (a[1].style.background ==='rgb(24, 171, 152)' && a[4].style.background ==='rgb(24, 171, 152)' && a[7].style.background ==='rgb(24, 171, 152)'){
+			insertText1('won!');
+		} else if (a[2].style.background ==='rgb(24, 171, 152)' && a[5].style.background ==='rgb(24, 171, 152)' && a[8].style.background ==='rgb(24, 171, 152)'){
+			insertText1('won!');
+		} else if (a[6].style.background ==='rgb(24, 171, 152)' && a[4].style.background ==='rgb(24, 171, 152)' && a[2].style.background ==='rgb(24, 171, 152)'){
+			insertText1('won!');
+		} else if (a[0].style.background ==='rgb(24, 171, 152)' && a[4].style.background ==='rgb(24, 171, 152)' && a[8].style.background ==='rgb(24, 171, 152)'){
+			insertText1('won!');
+		}
+	}
+	function judge2() {
+		if ( a[0].style.background ==='rgb(240, 218, 128)' && a[1].style.background ==='rgb(240, 218, 128)' && a[2].style.background ==='rgb(240, 218, 128)') {
+			insertText2('won!');
+			// p = confirm(player2 + 'has won!');
+		} else if (a[3].style.background ==='rgb(240, 218, 128)' && a[3].style.background ==='rgb(240, 218, 128)' && a[5].style.background ==='rgb(240, 218, 128)'){
+			insertText2('won!');
+			// p = confirm(player2 + 'has won!');
+		} else if (a[6].style.background ==='rgb(240, 218, 128)' && a[7].style.background ==='rgb(240, 218, 128)' && a[8].style.background ==='rgb(240, 218, 128)'){
+			insertText2('won!');
+			// p = confirm(player2 + 'has won!');
+		} else if (a[0].style.background ==='rgb(240, 218, 128)' && a[3].style.background ==='rgb(240, 218, 128)' && a[6].style.background ==='rgb(240, 218, 128)'){
+			insertText2('won!');
+			// p = confirm(player2 + 'has won!');
+		} else if (a[1].style.background ==='rgb(240, 218, 128)' && a[4].style.background ==='rgb(240, 218, 128)' && a[7].style.background ==='rgb(240, 218, 128)'){
+			insertText2('won!');
+			// p = confirm(player2 + 'has won!');
+		} else if (a[2].style.background ==='rgb(240, 218, 128)' && a[5].style.background ==='rgb(240, 218, 128)' && a[8].style.background ==='rgb(240, 218, 128)'){
+			insertText2('won!');
+			// p = confirm(player2 + 'has won!');
+		} else if (a[6].style.background ==='rgb(240, 218, 128)' && a[4].style.background ==='rgb(240, 218, 128)' && a[2].style.background ==='rgb(240, 218, 128)'){
+			insertText2('won!');
+			// p = confirm(player2 + 'has won!');
+		} else if (a[0].style.background ==='rgb(240, 218, 128)' && a[4].style.background ==='rgb(240, 218, 128)' && a[8].style.background ==='rgb(240, 218, 128)'){
+			insertText2('won!');
+		} 
+	}
+	function reload() {
+		location.reload();
+	}
+	var clickHandler = function(e){
+		console.log("target.style.background", e.target.style.background, player)
+		var color;
+		if (e.target.style.background !== '') { 
+			return; 
+		}
+		if (player === 1) {
+			color = 'rgb(24, 171, 152)';
+		} else {
+			color = 'rgb(240, 218, 128)';
+		} 
+		changeBackground(e.target, color);
+		judge1();
+		judge2();
+		// reload
+		// if (p === true) {
+		// 	reload();
+		// }
+		/*------------------------------------------------------------------------------------------------------------------------------------*/
+		// if (document.querySelector('td1') === 'mions won!') {
+		// 	reload();
+		// }
+		/*------------------------------------------------------------------------------------------------------------------------------------*/
+		if (player === 1) {
+			player = 2;
+		} else {
+			player = 1;
+		}
+	}
+	for(var i = 0; i < 9; i++){
+		a[i].onclick = clickHandler;
+	}
+</script>
+</body>
+</html>

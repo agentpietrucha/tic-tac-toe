@@ -1,0 +1,175 @@
+.hello-world{
+	text-align: center;
+	font-size: 60px;
+	font-family: Garamond, serif;
+}
+img{
+	display: block;
+	
+	margin: auto;
+}
+
+.style {
+	display: inline-block;
+	margin: auto;
+	height: 100px;
+	width: 100px;
+	border-radius: 100%;
+	border: 2px solid black;
+	text-align: center;
+	margin: auto;
+
+}
+div p{
+	position: relative;
+	margin-top: 40px;
+}
+a{
+	text-decoration: none;
+	color: green;
+}
+
+/*.button{
+	height: 100px;
+	width: 200px;
+	border-color: #6AED2D;
+	background-color: #ED2DD2;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 7px;
+	text-align: center;
+	margin-left: 200px;
+}
+.anotherbutton{
+	height: 100px;
+	width: 200px;
+	border-color: #6AED2D;
+	background-color: #ED2DD2;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 7px;
+	text-align: center;
+	margin-left: 1000px;
+	margin-top: -120px;
+}*/
+.button{
+	height: 100px;
+	width: 130px;
+	border-color: #6AED2D;
+	background-color: #ED2DD2;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 7px;
+	text-align: center;
+	margin-left: 300px;
+	float: left;
+}
+.kolo{
+	position: relative;
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	border-radius: 100%;
+	border: 2px solid black;
+	margin-left: 5px;
+	margin-top: 5px;
+	text-align: center;
+}
+table{
+	border: 5px solid black;
+}
+td{
+	border: 2px solid black;
+	
+}
+.baton{
+  color: black; 
+  border: 1px solid black;
+  background-color: rgb(233, 234, 234);
+  display: inline-block;
+  padding: 1px 6px;
+  cursor: pointer;
+  background: linear-gradient(to bottom, #F6F6F6 1%,#DDDDDD 100%);
+  opacity: .5;
+  transition: opacity 2s;
+ }
+.baton:hover{
+	opacity: 1;
+}
+.container{
+	margin: 0 auto;
+	width:312px;
+}
+.box{
+	height: 100px;
+	width: 100px;
+	display: inline-block;
+	border: 2px solid #4F5377;
+	border-radius: 2px;
+	background-color: #F0AAA9;
+	float: left;
+}
+.box:nth-child(3n+1){
+	display: block;
+	clear: both;
+}
+.tic{
+	height: 60px;
+	width: 100%;
+	text-align: center;
+	background-color: black;
+	opacity: .9;
+	border: 1px solid black;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	margin-top: -7.6px;
+}
+.h1{
+	text-align: center;
+	color: white;
+	font-family: 'Roboto slab';
+	margin: 8px auto;
+}
+body{
+	background-image: url(http://orig14.deviantart.net/405b/f/2012/180/b/f/pattern_variation_by_absurdwordpreferred-d55auet.jpg);
+
+}
+.winner{
+	position: relative;
+	margin-left: 100px;	
+	display: inline-block;
+	margin: 0 auto;
+}
+#td1{
+	font-family: 'Raleway';
+	font-size: 55px;
+	display: inline-block;	
+	position: relative;
+	margin-left: 80px;
+}
+.reload{
+	height: 50px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: black;
+  position: absolute;
+  margin: auto;
+  text-align: center;
+  margin: auto 250px;
+  font-size: 30px;
+  padding-top: 8px;
+  opacity: .5;
+  transition: opacity 1.5s;
+  color: white;
+}
+.reload:hover{
+	opacity: 1;
+}
+.preload{
+	text-align: center;
+	margin-top: -10px;
+	font-size: 30px;
+	position: relative;
+	margin-top: 5px;
+}
