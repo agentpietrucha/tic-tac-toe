@@ -38,7 +38,7 @@
 	// playerName();
 	// [a,b,c].onclc
 	function changeBackground(target, color) {
-		target.style.background = color;
+		target.classList.add(color);
 	}
 	function insertText1(input) {
 		document.getElementById('td1').innerHTML = player1 + ' ' + input;
@@ -47,47 +47,48 @@
 		document.getElementById('td1').innerHTML = player2 + ' ' + input;	
 	}
 	function judge1() {
-		if ( a[0].style.background ==='rgb(24, 171, 152)' && a[1].style.background ==='rgb(24, 171, 152)' && a[2].style.background ==='rgb(24, 171, 152)') {
+		console.log("FFF", a[0].classList)
+		if ( a[0].classList.contains('circle') && a[1].classList.contains('circle') && a[2].classList.contains('circle')) {
 			insertText1('won!');
-		} else if (a[3].style.background ==='rgb(24, 171, 152)' && a[4].style.background ==='rgb(24, 171, 152)' && a[5].style.background ==='rgb(24, 171, 152)'){
+		} else if (a[3].classList.contains('circle') && a[4].classList.contains('circle') && a[5].classList.contains('circle')){
 			insertText1('won!');
-		} else if (a[6].style.background ==='rgb(24, 171, 152)' && a[7].style.background ==='rgb(24, 171, 152)' && a[8].style.background ==='rgb(24, 171, 152)'){
+		} else if (a[6].classList.contains('circle') && a[7].classList.contains('circle') && a[8].classList.contains('circle')){
 			insertText1('won!');
-		} else if (a[0].style.background ==='rgb(24, 171, 152)' && a[3].style.background ==='rgb(24, 171, 152)' && a[6].style.background ==='rgb(24, 171, 152)'){
+		} else if (a[0].classList.contains('circle') && a[3].classList.contains('circle') && a[6].classList.contains('circle')){
 			insertText1('won!');
-		} else if (a[1].style.background ==='rgb(24, 171, 152)' && a[4].style.background ==='rgb(24, 171, 152)' && a[7].style.background ==='rgb(24, 171, 152)'){
+		} else if (a[1].classList.contains('circle') && a[4].classList.contains('circle') && a[7].classList.contains('circle')){
 			insertText1('won!');
-		} else if (a[2].style.background ==='rgb(24, 171, 152)' && a[5].style.background ==='rgb(24, 171, 152)' && a[8].style.background ==='rgb(24, 171, 152)'){
+		} else if (a[2].classList.contains('circle') && a[5].classList.contains('circle') && a[8].classList.contains('circle')){
 			insertText1('won!');
-		} else if (a[6].style.background ==='rgb(24, 171, 152)' && a[4].style.background ==='rgb(24, 171, 152)' && a[2].style.background ==='rgb(24, 171, 152)'){
+		} else if (a[6].classList.contains('circle') && a[4].classList.contains('circle') && a[2].classList.contains('circle')){
 			insertText1('won!');
-		} else if (a[0].style.background ==='rgb(24, 171, 152)' && a[4].style.background ==='rgb(24, 171, 152)' && a[8].style.background ==='rgb(24, 171, 152)'){
+		} else if (a[0].classList.contains('circle') && a[4].classList.contains('circle') && a[8].classList.contains('circle')){
 			insertText1('won!');
 		}
 	}
 	function judge2() {
-		if ( a[0].style.background ==='rgb(240, 218, 128)' && a[1].style.background ==='rgb(240, 218, 128)' && a[2].style.background ==='rgb(240, 218, 128)') {
+		if ( a[0].classList.contains('cross') && a[1].classList.contains('cross') && a[2].classList.contains('cross')) {
 			insertText2('won!');
 			// p = confirm(player2 + 'has won!');
-		} else if (a[3].style.background ==='rgb(240, 218, 128)' && a[3].style.background ==='rgb(240, 218, 128)' && a[5].style.background ==='rgb(240, 218, 128)'){
+		} else if (a[3].classList.contains('cross') && a[4].classList.contains('cross') && a[5].classList.contains('cross')){
 			insertText2('won!');
 			// p = confirm(player2 + 'has won!');
-		} else if (a[6].style.background ==='rgb(240, 218, 128)' && a[7].style.background ==='rgb(240, 218, 128)' && a[8].style.background ==='rgb(240, 218, 128)'){
+		} else if (a[6].classList.contains('cross') && a[7].classList.contains('cross') && a[8].classList.contains('cross')){
 			insertText2('won!');
 			// p = confirm(player2 + 'has won!');
-		} else if (a[0].style.background ==='rgb(240, 218, 128)' && a[3].style.background ==='rgb(240, 218, 128)' && a[6].style.background ==='rgb(240, 218, 128)'){
+		} else if (a[0].classList.contains('cross') && a[3].classList.contains('cross') && a[6].classList.contains('cross')){
 			insertText2('won!');
 			// p = confirm(player2 + 'has won!');
-		} else if (a[1].style.background ==='rgb(240, 218, 128)' && a[4].style.background ==='rgb(240, 218, 128)' && a[7].style.background ==='rgb(240, 218, 128)'){
+		} else if (a[1].classList.contains('cross') && a[4].classList.contains('cross') && a[7].classList.contains('cross')){
 			insertText2('won!');
 			// p = confirm(player2 + 'has won!');
-		} else if (a[2].style.background ==='rgb(240, 218, 128)' && a[5].style.background ==='rgb(240, 218, 128)' && a[8].style.background ==='rgb(240, 218, 128)'){
+		} else if (a[2].classList.contains('cross') && a[5].classList.contains('cross') && a[8].classList.contains('cross')){
 			insertText2('won!');
 			// p = confirm(player2 + 'has won!');
-		} else if (a[6].style.background ==='rgb(240, 218, 128)' && a[4].style.background ==='rgb(240, 218, 128)' && a[2].style.background ==='rgb(240, 218, 128)'){
+		} else if (a[6].classList.contains('cross') && a[4].classList.contains('cross') && a[2].classList.contains('cross')){
 			insertText2('won!');
 			// p = confirm(player2 + 'has won!');
-		} else if (a[0].style.background ==='rgb(240, 218, 128)' && a[4].style.background ==='rgb(240, 218, 128)' && a[8].style.background ==='rgb(240, 218, 128)'){
+		} else if (a[0].classList.contains('cross') && a[4].classList.contains('cross') && a[8].classList.contains('cross')){
 			insertText2('won!');
 		} 
 	}
@@ -101,9 +102,9 @@
 			return; 
 		}
 		if (player === 1) {
-			color = 'rgb(24, 171, 152)';
+			color = 'circle';
 		} else {
-			color = 'rgb(240, 218, 128)';
+			color = 'cross';
 		} 
 		changeBackground(e.target, color);
 		judge1();
@@ -129,3 +130,5 @@
 </script>
 </body>
 </html>
+
+<!-- rgb(24, 171, 152), rgb(240, 218, 128) -->

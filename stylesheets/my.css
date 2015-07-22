@@ -130,6 +130,9 @@ td{
 	font-family: 'Roboto slab';
 	margin: 8px auto;
 }
+.h1:hover{
+	cursor: default;
+}
 body{
 	background-image: url(http://orig14.deviantart.net/405b/f/2012/180/b/f/pattern_variation_by_absurdwordpreferred-d55auet.jpg);
 
@@ -162,6 +165,7 @@ body{
   opacity: .5;
   transition: opacity 1.5s;
   color: white;
+  cursor: default;
 }
 .reload:hover{
 	opacity: 1;
@@ -172,4 +176,16 @@ body{
 	font-size: 30px;
 	position: relative;
 	margin-top: 5px;
+}
+.circle{
+	background-image: url(http://kolorowanki.joe.pl/kolorowanka/puste-kolko.png);
+	height: 100px;
+	width: 100px;
+	background-size: 105%;
+}
+.cross{
+	background-image: url(http://studiofictus.com/wp-content/uploads/2011/01/X.png);
+	height: 100px;
+	width: 100px;
+	background-size: 108%;
 }
