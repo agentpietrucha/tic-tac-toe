@@ -46,8 +46,10 @@
 	function insertText2(input) {
 		document.getElementById('td1').innerHTML = player2 + ' ' + input;	
 	}
+	// function insertText3() {
+	// 	document.getElementById('td1').innerHTML = 'result is a tie';
+	// }
 	function judge1() {
-		console.log("FFF", a[0].classList)
 		if ( a[0].classList.contains('circle') && a[1].classList.contains('circle') && a[2].classList.contains('circle')) {
 			insertText1('won!');
 		} else if (a[3].classList.contains('circle') && a[4].classList.contains('circle') && a[5].classList.contains('circle')){
@@ -92,13 +94,25 @@
 			insertText2('won!');
 		} 
 	}
+	// function tieResult(){
+	// 	if (document.getElementById('td1').innerHTML === '') {
+	// 			alert('remis');
+	// 		}
+	// }
+	// function cos() {
+	// 		if(a[i].classList.contains('circle') ||  a[i].classList.contains('cross')) {
+	// 			if (document.getElementById('td1').innerHTML === '') {
+	// 			alert('remis');
+	// 		}
+	// 	}
+	// }
 	function reload() {
 		location.reload();
 	}
 	var clickHandler = function(e){
 		console.log("target.style.background", e.target.style.background, player)
 		var color;
-		if (e.target.style.background !== '') { 
+		if (e.target.classList.contains('cross') || e.target.classList.contains('circle')) { 
 			return; 
 		}
 		if (player === 1) {

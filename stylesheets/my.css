@@ -20,10 +20,7 @@ img{
 	margin: auto;
 
 }
-div p{
-	position: relative;
-	margin-top: 40px;
-}
+
 a{
 	text-decoration: none;
 	color: green;
@@ -139,7 +136,7 @@ body{
 }
 .winner{
 	position: relative;
-	margin-left: 100px;	
+	margin-left: 10px;	
 	display: inline-block;
 	margin: 0 auto;
 }
@@ -169,13 +166,8 @@ body{
 }
 .reload:hover{
 	opacity: 1;
-}
-.preload{
-	text-align: center;
-	margin-top: -10px;
-	font-size: 30px;
-	position: relative;
-	margin-top: 5px;
+	border: 1px solid white;
+	cursor: pointer;
 }
 .circle{
 	background-image: url(http://kolorowanki.joe.pl/kolorowanka/puste-kolko.png);
