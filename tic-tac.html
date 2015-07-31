@@ -5,7 +5,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab|Raleway:600' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="./stylesheets/my.css"></link>
 </head>
-<body>
+<body class="bodyTic">
 <div class="tic"><h1 class="h1">TIC-TAC-TOE.BeTA</h1></div>
 <div class="container">
 <div class="box"></div>
@@ -20,7 +20,14 @@
 </div>
 <div class="winner"><p id="td1"></p></div>
 <div class="reload" id="divrel">reload</div>
+<!-- <input id="nickname" type="text">
+<input id="submit" type="submit"> -->
 <script>
+	// var name = document.getElementById('nickname');
+	// var submit = document.getElementById('submit')
+	// submit.onclick = function() {
+	// 	player1 = name;
+	// }
 	var buttrel = document.getElementById('divrel');
 	buttrel.onclick = function() {
 		reload();
@@ -36,7 +43,6 @@
 		player2 = prompt('You are the player2, choose your name');
 	}
 	// playerName();
-	// [a,b,c].onclc
 	function changeBackground(target, color) {
 		target.classList.add(color);
 	}
@@ -44,11 +50,8 @@
 		document.getElementById('td1').innerHTML = player1 + ' ' + input;
 	}
 	function insertText2(input) {
-		document.getElementById('td1').innerHTML = player2 + ' ' + input;	
+		document.getElementById('td1').innerHTML = player2 + ' ' + input;
 	}
-	// function insertText3() {
-	// 	document.getElementById('td1').innerHTML = 'result is a tie';
-	// }
 	function judge1() {
 		if ( a[0].classList.contains('circle') && a[1].classList.contains('circle') && a[2].classList.contains('circle')) {
 			insertText1('won!');
@@ -71,74 +74,46 @@
 	function judge2() {
 		if ( a[0].classList.contains('cross') && a[1].classList.contains('cross') && a[2].classList.contains('cross')) {
 			insertText2('won!');
-			// p = confirm(player2 + 'has won!');
 		} else if (a[3].classList.contains('cross') && a[4].classList.contains('cross') && a[5].classList.contains('cross')){
 			insertText2('won!');
-			// p = confirm(player2 + 'has won!');
 		} else if (a[6].classList.contains('cross') && a[7].classList.contains('cross') && a[8].classList.contains('cross')){
 			insertText2('won!');
-			// p = confirm(player2 + 'has won!');
 		} else if (a[0].classList.contains('cross') && a[3].classList.contains('cross') && a[6].classList.contains('cross')){
 			insertText2('won!');
-			// p = confirm(player2 + 'has won!');
 		} else if (a[1].classList.contains('cross') && a[4].classList.contains('cross') && a[7].classList.contains('cross')){
 			insertText2('won!');
-			// p = confirm(player2 + 'has won!');
 		} else if (a[2].classList.contains('cross') && a[5].classList.contains('cross') && a[8].classList.contains('cross')){
 			insertText2('won!');
-			// p = confirm(player2 + 'has won!');
 		} else if (a[6].classList.contains('cross') && a[4].classList.contains('cross') && a[2].classList.contains('cross')){
 			insertText2('won!');
-			// p = confirm(player2 + 'has won!');
 		} else if (a[0].classList.contains('cross') && a[4].classList.contains('cross') && a[8].classList.contains('cross')){
 			insertText2('won!');
-		} 
+		}
 	}
-	// function tieResult(){
-	// 	if (document.getElementById('td1').innerHTML === '') {
-	// 			alert('remis');
-	// 		}
-	// }
-	// function cos() {
-	// 		if(a[i].classList.contains('circle') ||  a[i].classList.contains('cross')) {
-	// 			if (document.getElementById('td1').innerHTML === '') {
-	// 			alert('remis');
-	// 		}
-	// 	}
-	// }
 	function reload() {
 		location.reload();
 	}
 	var clickHandler = function(e){
 		console.log("target.style.background", e.target.style.background, player)
 		var color;
-		if (e.target.classList.contains('cross') || e.target.classList.contains('circle')) { 
-			return; 
+		if (e.target.classList.contains('cross') || e.target.classList.contains('circle')) {
+			return;
 		}
 		if (player === 1) {
 			color = 'circle';
 		} else {
 			color = 'cross';
-		} 
+		}
 		changeBackground(e.target, color);
 		judge1();
 		judge2();
-		// reload
-		// if (p === true) {
-		// 	reload();
-		// }
-		/*------------------------------------------------------------------------------------------------------------------------------------*/
-		// if (document.querySelector('td1') === 'mions won!') {
-		// 	reload();
-		// }
-		/*------------------------------------------------------------------------------------------------------------------------------------*/
 		if (player === 1) {
 			player = 2;
 		} else {
 			player = 1;
 		}
 	}
-	for(var i = 0; i < 9; i++){
+	for(var i = 0; i < a.length; i++){
 		a[i].onclick = clickHandler;
 	}
 </script>

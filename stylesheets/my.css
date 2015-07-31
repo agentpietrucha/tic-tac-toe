@@ -3,28 +3,6 @@
 	font-size: 60px;
 	font-family: Garamond, serif;
 }
-img{
-	display: block;
-	
-	margin: auto;
-}
-
-.style {
-	display: inline-block;
-	margin: auto;
-	height: 100px;
-	width: 100px;
-	border-radius: 100%;
-	border: 2px solid black;
-	text-align: center;
-	margin: auto;
-
-}
-
-a{
-	text-decoration: none;
-	color: green;
-}
 
 /*.button{
 	height: 100px;
@@ -72,15 +50,8 @@ a{
 	margin-top: 5px;
 	text-align: center;
 }
-table{
-	border: 5px solid black;
-}
-td{
-	border: 2px solid black;
-	
-}
 .baton{
-  color: black; 
+  color: black;
   border: 1px solid black;
   background-color: rgb(233, 234, 234);
   display: inline-block;
@@ -96,6 +67,11 @@ td{
 .container{
 	margin: 0 auto;
 	width:312px;
+	opacity: .8;
+	transition: opacity 1.5s;
+}
+.container:hover{
+	opacity: 1;
 }
 .box{
 	height: 100px;
@@ -130,20 +106,20 @@ td{
 .h1:hover{
 	cursor: default;
 }
-body{
+.bodyTic{
 	background-image: url(http://orig14.deviantart.net/405b/f/2012/180/b/f/pattern_variation_by_absurdwordpreferred-d55auet.jpg);
 
 }
 .winner{
 	position: relative;
-	margin-left: 10px;	
+	margin-left: 10px;
 	display: inline-block;
 	margin: 0 auto;
 }
 #td1{
 	font-family: 'Raleway';
 	font-size: 55px;
-	display: inline-block;	
+	display: inline-block;
 	position: relative;
 	margin-left: 80px;
 }
@@ -180,4 +156,46 @@ body{
 	height: 100px;
 	width: 100px;
 	background-size: 108%;
+}
+.navbar a{
+	text-decoration: none;
+	color: green;
+	font-size: 22px;
+	font-family: 'Raleway'
+}
+.navbar a:hover{
+	text-decoration: underline;
+}
+.navbar ul{
+	height: 12%;
+	width: 100%;
+	background-color: #333;
+	list-style: none;
+	padding-left: 0px;
+}
+.navbar li{
+	float: right;
+	padding: 5px;
+}
+.backphoto h1{
+	color: white;
+	font-size: 30px;
+	font-family: 'Roboto slab';
+	padding-left: 2px;
+	display: inline;
+	position: relative;
+}
+.backphoto{
+	background-image: url(http://jpupdates.com/wp-content/uploads/2015/02/nyc_skyline.jpg);
+	width: 100%;
+	height: 88%;
+	position: absolute;
+	background-position: 32% 49%;
+}
+input[type='text']{
+	float: left;
+	margin-bottom: -100px;
+	margin-left: -608px;
+	background-color: #F0DA80;
+	border: 3px solid #EFA9A9;
 }
