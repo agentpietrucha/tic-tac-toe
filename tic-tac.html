@@ -52,44 +52,39 @@
 	function insertText2(input) {
 		document.getElementById('td1').innerHTML = player2 + ' ' + input;
 	}
-	function judge1() {
-		if ( a[0].classList.contains('circle') && a[1].classList.contains('circle') && a[2].classList.contains('circle')) {
-			insertText1('won!');
-		} else if (a[3].classList.contains('circle') && a[4].classList.contains('circle') && a[5].classList.contains('circle')){
-			insertText1('won!');
-		} else if (a[6].classList.contains('circle') && a[7].classList.contains('circle') && a[8].classList.contains('circle')){
-			insertText1('won!');
-		} else if (a[0].classList.contains('circle') && a[3].classList.contains('circle') && a[6].classList.contains('circle')){
-			insertText1('won!');
-		} else if (a[1].classList.contains('circle') && a[4].classList.contains('circle') && a[7].classList.contains('circle')){
-			insertText1('won!');
-		} else if (a[2].classList.contains('circle') && a[5].classList.contains('circle') && a[8].classList.contains('circle')){
-			insertText1('won!');
-		} else if (a[6].classList.contains('circle') && a[4].classList.contains('circle') && a[2].classList.contains('circle')){
-			insertText1('won!');
-		} else if (a[0].classList.contains('circle') && a[4].classList.contains('circle') && a[8].classList.contains('circle')){
-			insertText1('won!');
+
+	function insertText(player) {
+		document.getElementById('td1').innerHTML = player + ' won!';
+	}
+
+	function judge() {
+		var checks = ['circle', 'cross'];
+
+		for (var i = checks.length - 1; i >= 0; i--) {
+			var check = checks[i];
+			var player = player1;
+			if (check === 'cross') {
+				player = player2;
+			}
+			if (a[0].classList.contains(check) && a[1].classList.contains(check) && a[2].classList.contains(check)) {
+			insertText(player);
+		} else if (a[3].classList.contains(check) && a[4].classList.contains(check) && a[5].classList.contains(check)){
+			insertText(player);
+		} else if (a[6].classList.contains(check) && a[7].classList.contains(check) && a[8].classList.contains(check)){
+			insertText(player);
+		} else if (a[0].classList.contains(check) && a[3].classList.contains(check) && a[6].classList.contains(check)){
+			insertText(player);
+		} else if (a[1].classList.contains(check) && a[4].classList.contains(check) && a[7].classList.contains(check)){
+			insertText(player);
+		} else if (a[2].classList.contains(check) && a[5].classList.contains(check) && a[8].classList.contains(check)){
+			insertText(player);
+		} else if (a[6].classList.contains(check) && a[4].classList.contains(check) && a[2].classList.contains(check)){
+			insertText(player);
+		} else if (a[0].classList.contains(check) && a[4].classList.contains(check) && a[8].classList.contains(check)){
+			insertText(player);
 		}
 	}
-	function judge2() {
-		if ( a[0].classList.contains('cross') && a[1].classList.contains('cross') && a[2].classList.contains('cross')) {
-			insertText2('won!');
-		} else if (a[3].classList.contains('cross') && a[4].classList.contains('cross') && a[5].classList.contains('cross')){
-			insertText2('won!');
-		} else if (a[6].classList.contains('cross') && a[7].classList.contains('cross') && a[8].classList.contains('cross')){
-			insertText2('won!');
-		} else if (a[0].classList.contains('cross') && a[3].classList.contains('cross') && a[6].classList.contains('cross')){
-			insertText2('won!');
-		} else if (a[1].classList.contains('cross') && a[4].classList.contains('cross') && a[7].classList.contains('cross')){
-			insertText2('won!');
-		} else if (a[2].classList.contains('cross') && a[5].classList.contains('cross') && a[8].classList.contains('cross')){
-			insertText2('won!');
-		} else if (a[6].classList.contains('cross') && a[4].classList.contains('cross') && a[2].classList.contains('cross')){
-			insertText2('won!');
-		} else if (a[0].classList.contains('cross') && a[4].classList.contains('cross') && a[8].classList.contains('cross')){
-			insertText2('won!');
-		}
-	}
+};
 	function reload() {
 		location.reload();
 	}
@@ -105,8 +100,7 @@
 			color = 'cross';
 		}
 		changeBackground(e.target, color);
-		judge1();
-		judge2();
+		judge();
 		if (player === 1) {
 			player = 2;
 		} else {
