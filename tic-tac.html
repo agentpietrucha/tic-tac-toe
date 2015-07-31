@@ -48,10 +48,10 @@
 			var check = checks[i];
 			var player = player1;
 			function isLine(input1, input2, input3) {
-		if (input1.classList.contains(check) && input2.classList.contains(check) && input3.classList.contains(check)) {
-			return true;
-		}
-	}
+				if (input1.classList.contains(check) && input2.classList.contains(check) && input3.classList.contains(check)) {
+					return true;
+				}
+			}
 			if (check === 'cross') {
 				player = player2;
 			}
@@ -101,18 +101,3 @@
 </html>
 
 <!-- rgb(24, 171, 152), rgb(240, 218, 128) -->
-<!--  else if (a[3].classList.contains(check) && a[4].classList.contains(check) && a[5].classList.contains(check)){
-			insertText(player);
-		} else if (a[6].classList.contains(check) && a[7].classList.contains(check) && a[8].classList.contains(check)){
-			insertText(player);
-		} else if (a[0].classList.contains(check) && a[3].classList.contains(check) && a[6].classList.contains(check)){
-			insertText(player);
-		} else if (a[1].classList.contains(check) && a[4].classList.contains(check) && a[7].classList.contains(check)){
-			insertText(player);
-		} else if (a[2].classList.contains(check) && a[5].classList.contains(check) && a[8].classList.contains(check)){
-			insertText(player);
-		} else if (a[6].classList.contains(check) && a[4].classList.contains(check) && a[2].classList.contains(check)){
-			insertText(player);
-		} else if (a[0].classList.contains(check) && a[4].classList.contains(check) && a[8].classList.contains(check)){
-			insertText(player);
-		} -->
