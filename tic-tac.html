@@ -20,14 +20,7 @@
 </div>
 <div class="winner"><p id="td1"></p></div>
 <div class="reload" id="divrel">reload</div>
-<!-- <input id="nickname" type="text">
-<input id="submit" type="submit"> -->
 <script>
-	// var name = document.getElementById('nickname');
-	// var submit = document.getElementById('submit')
-	// submit.onclick = function() {
-	// 	player1 = name;
-	// }
 	var buttrel = document.getElementById('divrel');
 	buttrel.onclick = function() {
 		location.reload();
@@ -46,17 +39,9 @@
 	function changeBackground(target, color) {
 		target.classList.add(color);
 	}
-	function insertText1(input) {
-		document.getElementById('td1').innerHTML = player1 + ' ' + input;
-	}
-	function insertText2(input) {
-		document.getElementById('td1').innerHTML = player2 + ' ' + input;
-	}
-
 	function insertText(player) {
 		document.getElementById('td1').innerHTML = player + ' won!';
 	}
-
 	function judge() {
 		var checks = ['circle', 'cross'];
 
