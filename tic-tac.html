@@ -27,7 +27,6 @@
 	}
 	var a = document.querySelectorAll('.box')
 	var player = 1;
-	var p
 	//tu trzeba potem usunac = 'mions'
 	var player1 = 'mions';
 	var player2 = 'benio';
@@ -39,8 +38,8 @@
 	function changeBackground(target, color) {
 		target.classList.add(color);
 	}
-	function insertText(player) {
-		document.getElementById('td1').innerHTML = player + ' won!';
+	function insertText(playerName) {
+		document.getElementById('td1').innerHTML = playerName + ' won!';
 	}
 	function judge() {
 		var checks = ['circle', 'cross'];
@@ -48,28 +47,33 @@
 		for (var i = checks.length - 1; i >= 0; i--) {
 			var check = checks[i];
 			var player = player1;
+			function isLine(input1, input2, input3) {
+		if (input1.classList.contains(check) && input2.classList.contains(check) && input3.classList.contains(check)) {
+			return true;
+		}
+	}
 			if (check === 'cross') {
 				player = player2;
 			}
-			if (a[0].classList.contains(check) && a[1].classList.contains(check) && a[2].classList.contains(check)) {
+			if (isLine(a[0], a[1], a[2])) {
 			insertText(player);
-		} else if (a[3].classList.contains(check) && a[4].classList.contains(check) && a[5].classList.contains(check)){
+		} else if (isLine(a[3], a[4], a[5])) {
 			insertText(player);
-		} else if (a[6].classList.contains(check) && a[7].classList.contains(check) && a[8].classList.contains(check)){
+		} else if (isLine(a[6], a[7], a[8])) {
 			insertText(player);
-		} else if (a[0].classList.contains(check) && a[3].classList.contains(check) && a[6].classList.contains(check)){
+		} else if (isLine(a[0], a[3], a[6])) {
 			insertText(player);
-		} else if (a[1].classList.contains(check) && a[4].classList.contains(check) && a[7].classList.contains(check)){
+		} else if (isLine(a[1], a[4], a[7])) {
 			insertText(player);
-		} else if (a[2].classList.contains(check) && a[5].classList.contains(check) && a[8].classList.contains(check)){
+		} else if (isLine(a[2], a[5], a[8])) {
 			insertText(player);
-		} else if (a[6].classList.contains(check) && a[4].classList.contains(check) && a[2].classList.contains(check)){
+		} else if (isLine(a[0], a[4], a[8])) {
 			insertText(player);
-		} else if (a[0].classList.contains(check) && a[4].classList.contains(check) && a[8].classList.contains(check)){
+		} else if (isLine(a[6], a[4], a[2])) {
 			insertText(player);
 		}
 	}
-};
+}
 	var clickHandler = function(e){
 		console.log("target.style.background", e.target.style.background, player)
 		var color;
@@ -97,3 +101,18 @@
 </html>
 
 <!-- rgb(24, 171, 152), rgb(240, 218, 128) -->
+<!--  else if (a[3].classList.contains(check) && a[4].classList.contains(check) && a[5].classList.contains(check)){
+			insertText(player);
+		} else if (a[6].classList.contains(check) && a[7].classList.contains(check) && a[8].classList.contains(check)){
+			insertText(player);
+		} else if (a[0].classList.contains(check) && a[3].classList.contains(check) && a[6].classList.contains(check)){
+			insertText(player);
+		} else if (a[1].classList.contains(check) && a[4].classList.contains(check) && a[7].classList.contains(check)){
+			insertText(player);
+		} else if (a[2].classList.contains(check) && a[5].classList.contains(check) && a[8].classList.contains(check)){
+			insertText(player);
+		} else if (a[6].classList.contains(check) && a[4].classList.contains(check) && a[2].classList.contains(check)){
+			insertText(player);
+		} else if (a[0].classList.contains(check) && a[4].classList.contains(check) && a[8].classList.contains(check)){
+			insertText(player);
+		} -->
