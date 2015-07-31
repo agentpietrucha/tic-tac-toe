@@ -30,7 +30,7 @@
 	// }
 	var buttrel = document.getElementById('divrel');
 	buttrel.onclick = function() {
-		reload();
+		location.reload();
 	}
 	var a = document.querySelectorAll('.box')
 	var player = 1;
@@ -85,9 +85,6 @@
 		}
 	}
 };
-	function reload() {
-		location.reload();
-	}
 	var clickHandler = function(e){
 		console.log("target.style.background", e.target.style.background, player)
 		var color;
