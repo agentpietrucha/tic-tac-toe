@@ -6,20 +6,47 @@
 	<link rel="stylesheet" href="./stylesheets/my.css"></link>
 </head>
 <body class="bodyTic">
-<div class="tic"><h1 class="h1">TIC-TAC-TOE.BeTA</h1></div>
-<div class="container">
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
-<div class="box"></div>
+<nav class="navbar">
+	<ul>
+	<a href="mainPage.html"><h1>Libreviews</h1></a>
+		<div>
+		<li>
+			<a href="aboutMe.html">About me</a>
+		</li>
+		<li>
+			<a href="myProjects.html">My projects</a>
+		</li>
+		<li>
+			<a href="#">Contact</a>
+		</li>
+		</div>
+	</ul>
+</nav>
+<div class="flexContainer">
+	<div>	
+		<div class="reload" id="divrel">reload</div>
+	</div>
+	<div>
+		<div class="tic"><h1 class="h1">TIC-TAC-TOE.BeTA</h1></div>
+		<div class="tic-tac_container">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+	</div>
+	<div>
+		<div class="winner"><p id="winner"></p></div>
+	</div>
 </div>
-<div class="winner"><p id="td1"></p></div>
-<div class="reload" id="divrel">reload</div>
+<div class="footer">
+	<p>@ Libreviews 2015</p>
+</div>
 <script>
 	var buttrel = document.getElementById('divrel');
 	buttrel.onclick = function() {
@@ -39,8 +66,16 @@
 		target.classList.add(color);
 	}
 	function insertText(playerName) {
-		document.getElementById('td1').innerHTML = playerName + ' won!';
+		document.getElementById('winner').innerHTML = playerName + ' won!';
 	}
+	// function tieResult() {
+	// 	for(var i = 0; i < a.length; i ++) {
+	// 		if (a[i] nie zawiera klase) {
+	// 			return false;
+	// 		}
+	// 	}
+	// 	return true;
+	// }
 	function judge() {
 		var checks = ['circle', 'cross'];
 

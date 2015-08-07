@@ -3,74 +3,13 @@
 	font-size: 60px;
 	font-family: Garamond, serif;
 }
-
-/*.button{
-	height: 100px;
-	width: 200px;
-	border-color: #6AED2D;
-	background-color: #ED2DD2;
-	border-style: solid;
-	border-width: 5px;
-	border-radius: 7px;
-	text-align: center;
-	margin-left: 200px;
-}
-.anotherbutton{
-	height: 100px;
-	width: 200px;
-	border-color: #6AED2D;
-	background-color: #ED2DD2;
-	border-style: solid;
-	border-width: 5px;
-	border-radius: 7px;
-	text-align: center;
-	margin-left: 1000px;
-	margin-top: -120px;
-}*/
-.button{
-	height: 100px;
-	width: 130px;
-	border-color: #6AED2D;
-	background-color: #ED2DD2;
-	border-style: solid;
-	border-width: 5px;
-	border-radius: 7px;
-	text-align: center;
-	margin-left: 300px;
-	float: left;
-}
-.kolo{
-	position: relative;
-	display: inline-block;
-	height: 100px;
-	width: 100px;
-	border-radius: 100%;
-	border: 2px solid black;
-	margin-left: 5px;
-	margin-top: 5px;
-	text-align: center;
-}
-.baton{
-  color: black;
-  border: 1px solid black;
-  background-color: rgb(233, 234, 234);
-  display: inline-block;
-  padding: 1px 6px;
-  cursor: pointer;
-  background: linear-gradient(to bottom, #F6F6F6 1%,#DDDDDD 100%);
-  opacity: .5;
-  transition: opacity 2s;
- }
-.baton:hover{
-	opacity: 1;
-}
-.container{
+.tic-tac_container{
 	margin: 0 auto;
 	width:312px;
 	opacity: .8;
 	transition: opacity 1.5s;
 }
-.container:hover{
+.tic-tac_container:hover{
 	opacity: 1;
 }
 .box{
@@ -95,7 +34,7 @@
 	border: 1px solid black;
 	border-radius: 8px;
 	margin-bottom: 20px;
-	margin-top: -7.6px;
+	margin-top: 27.4px;
 }
 .h1{
 	text-align: center;
@@ -108,13 +47,18 @@
 }
 .bodyTic{
 	background-image: url(http://orig14.deviantart.net/405b/f/2012/180/b/f/pattern_variation_by_absurdwordpreferred-d55auet.jpg);
-
+	margin: 0;
 }
 .winner{
 	position: relative;
 	margin-left: 10px;
 	display: inline-block;
-	margin: 0 auto;
+	margin: 84px auto;
+	text-align: center;
+}
+.winner p{
+	font-family: 'Roboto slab';
+	font-size: 50px;
 }
 #td1{
 	font-family: 'Raleway';
@@ -130,9 +74,8 @@
   border-radius: 8px;
   background-color: black;
   position: absolute;
-  margin: auto;
   text-align: center;
-  margin: auto 250px;
+  margin: 135px 213px;
   font-size: 30px;
   padding-top: 8px;
   opacity: .5;
@@ -157,27 +100,7 @@
 	width: 100px;
 	background-size: 108%;
 }
-.navbar a{
-	text-decoration: none;
-	color: green;
-	font-size: 22px;
-	font-family: 'Raleway'
-}
-.navbar a:hover{
-	text-decoration: underline;
-}
-.navbar ul{
-	height: 12%;
-	width: 100%;
-	background-color: #333;
-	list-style: none;
-	padding-left: 0px;
-}
-.navbar li{
-	float: right;
-	padding: 5px;
-}
-.backphoto h1{
+/*.backphoto h1{
 	color: white;
 	font-size: 30px;
 	font-family: 'Roboto slab';
@@ -189,14 +112,258 @@
 	background-image: url(http://jpupdates.com/wp-content/uploads/2015/02/nyc_skyline.jpg);
 	width: 100%;
 	height: 88%;
-	position: absolute;
 	background-position: 32% 49%;
+	margin: -8px;
+}*/
+.mainPage{
+	margin: 0;
 }
-input[type='text']{
-	float: left;
-	margin-bottom: -100px;
-	margin-left: -608px;
-	background-color: #F0DA80;
-	border: 3px solid #EFA9A9;
-	
+.navbar{
+	position: relative;
+	height: 40px;
 }
+.navbar h1{
+	font-family: 'Roboto slab';
+	font-size: 30px;
+	font-weight: bold;
+	display: inline;
+	color: white;
+	padding-left: 35px;
+	margin: 0;
+}
+.navbar ul{
+	width: 100%;
+	height: 40px;
+	background-color: #333;
+	margin: 0;
+	position: absolute;
+	padding: 0;
+
+}
+.navbar li{
+	display: inline-block;
+	list-style: none;
+	margin: 12px;
+}
+/*.navbar li:hover{
+background-color: #585858;	
+}*/
+.navbar a{
+	text-decoration: none;
+	color: white;
+	font-family: 'Roboto slab';
+	font-size: 15px;
+}
+.navbar a:hover{
+	text-decoration: underline;
+}
+.navbar div{
+	position: relative;
+	float: right;
+	margin-right: 116px;
+}
+.backphoto{
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/89/Buenos_Aires_-_Recoleta_-_El_Ateneo_ex_Grand_Splendid_3.JPG);	
+	background-size: cover;
+	height: 627px;
+	background-position: 48% 48%;
+}
+.photoText{
+	text-align: center;
+	position: relative;
+	top: 150px;
+}
+.photoText h1{
+	color: goldenrod;
+	font-size: 70px;
+	margin: 0 0 40px 0;
+	text-transform: uppercase;
+	font-family: 'Raleway';
+}
+.photoText a{
+	background-color: goldenrod;
+	color: #fff;
+	font-size:  18px;
+	font-family: 'Raleway';
+	padding: 15px 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.photoText a:hover{
+	cursor: pointer;
+}
+.flexContainer{
+	display: flex;
+}
+.flexContainer > div {
+	flex: 1;
+	text-align: center;
+}
+.projects a {
+	text-decoration: none;
+	font-size: 20px;
+	font-family: 'Raleway';
+	color: goldenrod;
+}
+.projects a:hover{
+	text-decoration: underline;
+}
+.projects li{
+	list-style: none;
+}
+.projects ul{
+	margin: 0;
+	padding: 0;
+}
+.projects h1{
+	font-family: 'Raleway';
+	font-size: 40px;
+	text-transform: uppercase;
+	color: white;
+}
+.projects{
+	margin right: 50px;
+	background-image: url(http://g4.gazetaprawna.pl/p/_wspolne/pliki/1307000/1307340-pac-man.jpg);
+	background-size: cover;
+	background-position: 10% 5%;
+	/*padding-bottom: 192px;*/
+	height: 435px;
+}
+.soon{
+	text-align: center;
+	background-color: #333;
+	border-right: 2px solid black;
+	border-top: 2px solid black
+}
+.soon h1{
+	font-family: 'Raleway';
+	font-size: 30px;
+	color: white;
+	margin: 0;
+}
+.contactBackPhoto{
+	background-image: url(https://download.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg);	
+	height: 627px;
+	background-size: cover;
+	background-position: 0% 57%;
+}
+.contactBackPhoto div:first-child{
+	text-align: center;
+	position: relative;
+	top: 166px;
+}
+.contactBackPhoto h1{
+	font-family: 'Roboto slab';
+	font-size: 60px;
+	color: #EA11C9;
+	margin: 0 0 30px 0;
+}
+.contact{
+	text-align: center;
+	position: relative;
+	top: 170px;
+	opacity: 1;
+	margin: 0;
+	padding: 0;
+}
+.contact a{
+	text-decoration: none;
+	font-family: 'Roboto slab';
+	font-size: 20px;
+	color: #DCD6D6;
+	position: relative;
+}
+.contact a:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+.contact h2{
+	font-family: 'Roboto slab';
+	font-size: 20px;
+	margin: 0;
+	position: relative;
+	color: #DCD6D6;
+}
+.aboutMePhoto{
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/31/Chopin_polonaise_Op._53.jpg);
+	background-size: cover;
+	height: 627px;
+	background-position: 10% 10%;
+	text-align: center;
+}
+.aboutMePhoto h1{
+	font-family: 'Raleway';
+	font-size: 70px;
+	color: #585858;
+	margin: 0;
+	padding-top: 140px;
+	color: #EFA817
+}
+.footer{
+	margin: 0 auto;
+	max-width: 940px;
+	padding: 0 10px;
+}
+.footer p{
+	font-family: 'Raleway';
+	text-transform: uppercase;
+	font-size: 11px;
+}
+/*.element {
+  display: inline-block;
+  background-color: #0074d9;
+  height: 100px;
+  width: 100px;
+  font-size: 1px;
+  padding: 1px;
+  color: white;
+  margin-right: 5px;
+  margin-left: 5px;
+  -webkit-animation: roll 3s infinite;
+          animation: roll 3s infinite;
+  -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+          transform: rotate(30deg);
+  opacity: .7;
+}
+
+@-webkit-keyframes roll {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes roll {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+body, html {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}*/
