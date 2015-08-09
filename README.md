@@ -1,2 +1,2 @@
 # tic-tac-toe
-libreviews.com
+http://libreviews.com/
