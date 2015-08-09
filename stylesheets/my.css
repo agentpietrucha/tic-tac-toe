@@ -12,7 +12,7 @@
 .tic-tac_container:hover{
 	opacity: 1;
 }
-.box{
+.tic-tac_container div{
 	height: 100px;
 	width: 100px;
 	display: inline-block;
@@ -21,7 +21,7 @@
 	background-color: #F0AAA9;
 	float: left;
 }
-.box:nth-child(3n+1){
+.tic-tac_container div:nth-child(3n+1){
 	display: block;
 	clear: both;
 }
@@ -73,9 +73,10 @@
   border: 1px solid black;
   border-radius: 8px;
   background-color: black;
-  position: absolute;
+  position: relative;
   text-align: center;
-  margin: 135px 213px;
+  top: 72px;
+  left: 150px;
   font-size: 30px;
   padding-top: 8px;
   opacity: .5;
@@ -165,7 +166,7 @@ background-color: #585858;
 .backphoto{
 	background-image: url(https://upload.wikimedia.org/wikipedia/commons/8/89/Buenos_Aires_-_Recoleta_-_El_Ateneo_ex_Grand_Splendid_3.JPG);	
 	background-size: cover;
-	height: 627px;
+	height: 641px;
 	background-position: 48% 48%;
 }
 .photoText{
@@ -304,13 +305,14 @@ background-color: #585858;
 	margin: 0 auto;
 	max-width: 940px;
 	padding: 0 10px;
+	position: relative;
 }
 .footer p{
 	font-family: 'Raleway';
 	text-transform: uppercase;
 	font-size: 11px;
 }
-/*.element {
+.element {
   display: inline-block;
   background-color: #0074d9;
   height: 100px;
@@ -328,7 +330,7 @@ background-color: #585858;
   opacity: .7;
 }
 
-@-webkit-keyframes roll {
+/*@-webkit-keyframes roll {
   0% {
     -webkit-transform: rotate(0);
             transform: rotate(0);
@@ -337,7 +339,7 @@ background-color: #585858;
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
-}
+}*/
 
 @keyframes roll {
   0% {
@@ -349,11 +351,11 @@ background-color: #585858;
             transform: rotate(360deg);
   }
 }
-body, html {
+/*body, html {
   height: 100%;
-}
+}*/
 
-body {
+/*body {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -367,3 +369,67 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }*/
+.square{
+	height: 200px;
+	width: auto;
+	background-color: #C70808;
+	opacity: .8;
+	text-align: center;
+	/*position: relative;*/
+	display: block;
+}
+.square:hover{
+	background-color: #08B7C7;
+}
+.square h1{
+	font-size: 50px;
+	color: #C70808;
+	margin: 0;
+	padding: 0;
+	top: 80px;
+	position: relative;		
+}
+.square h1:hover{
+	color: black;
+}
+.square > div{
+	height: 120px;
+	width: 120px;
+	background-color: goldenrod;
+	animation: roll 1.5s infinite;
+	opacity: .7;
+	display: inline-block;
+	position: relative;
+	bottom: 58px;
+}
+.square > div:hover{
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	background-color: green;
+	opacity: 0;
+}
+.square div:nth-child(2n+1){
+	background-color: green;
+	top: 22px;
+}
+.square div:nth-child(2n+1):hover{
+	background-color: goldenrod;
+	opacity: 0;
+}
+.form{
+	position: relative;
+	top: 140px;
+}
+.form label{
+	font-family: 'Raleway';
+	font-size: 19px;
+	margin-right: 30px;
+}
+.form input[type='text']{
+	border: 1px solid black;
+}
+.form input[type='submit']{
+	border: 1px solid black;
+	font-size: 13px;
+	font-family: 'Raleway';
+}
